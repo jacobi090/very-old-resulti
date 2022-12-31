@@ -5,6 +5,7 @@ text-align:;
 h1 {
 background-color: ;
 }
+
 h2 {
 background-color:;
  }
@@ -16,6 +17,5 @@ a:hover, a:active {
 }
 
 h1 {
-  border-bottom: 5px solid #0079ff;
+  border-bottom: 5px solid #0079FF;
 }
-
