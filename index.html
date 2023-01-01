@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html>
 <title>Go! - Your New Search Engine!</title>
+<style>
+      body {
+        padding: 25px;
+        background-color: white;
+        color: black;
+        font-size: 25px;
+      }
+      .dark-mode {
+        background-color: black;
+        color: white;
+      }
+      .light-mode {
+        background-color: white;
+        color: black;
+      }
+    </style>
 <link rel="shortcut icon" type="image/jpg" href="https://avatars.githubusercontent.com/u/121660593?s=400&u=1a3a5098ea99ae370b721de462a40ce942ebd62e&v=4"
   <head>
   <meta name="theme-color" content="#0033cc">
@@ -58,6 +74,23 @@ alt="" title="Goooooooooooooooooo!" style="float:center-top;margin:0 100px 100px
   <center>
   <i class="bi bi-exclude"> <a href="/about.html"> About Go!</a></i>
   </center>
+  <h3 id="DarkModetext">Dark Mode is OFF</h3>
+    <button onclick="darkMode()">Darkmode</button>
+    <button onclick="lightMode()">LightMode</button>
+    <script>
+      function darkMode() {
+        var element = document.body;
+        var content = document.getElementById("DarkModetext");
+        element.className = "dark-mode";
+        content.innerText = "Dark Mode is ON";
+      }
+      function lightMode() {
+        var element = document.body;
+        var content = document.getElementById("DarkModetext");
+        element.className = "light-mode";
+        content.innerText = "Dark Mode is OFF";
+      }
+    </script>
   <center>
   <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Goodbye JSearch...Hello Go!</p>&mdash; Go! (@gosearchoff) <a href="https://twitter.com/gosearchoff/status/1609001660570914816?ref_src=twsrc%5Etfw">December 31, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
   </center>
