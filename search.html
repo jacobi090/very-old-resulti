@@ -23,4 +23,19 @@ alt="" title="Goooooooooooooooooo!" style="float:center;margin:0 0px 0 px;" />
 <script async src="https://cse.google.com/cse.js?cx=b2eb70a2649874cc6">
 </script>
 <div class="gcse-searchresults-only"></div>
+  
+  <script>
+    // check if there is any text in the search string
+if (window.location.search.length > 0) {
+  // retrieve the "q" keyed search string value
+  var q = window.location.search.substring(1).split('&').filter(function(x) {
+    return x.substring(0, 2) === 'q=';
+  })[0].substring(2);
+  // put the value to the search box if it is not empty
+  if (q.length > 0) {
+    document.querySelector('input[name="q"]').value = q;
+  }
+}
+
+  </script>
 </html>
