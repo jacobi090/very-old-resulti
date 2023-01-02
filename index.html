@@ -34,12 +34,11 @@ alt="" title="Goooooooooooooooooo!" style="float:center-top;margin:0 100px 100px
   </center>
   
 <center>
- <form id="standard-2" method="get" action="/search.html" id="form1">
+ 
+	<form id="standard" method="get" action="">
     <input type="text" class="search-txt-input" name="q" maxlength="100">
-    <button type="submit" form="form1"  class="search-button">
-      <i class="fa fa-search"></i>
-    </button>
-  </form>
+    <input type="submit" value="search" class="search-button">
+	</form>
   <style>
     /* resets */
 *,
@@ -59,21 +58,33 @@ h1 {
   font-family: 'Muli', sans-serif;
   text-transform: uppercase;
 }
-
-.container {
-  width: 50%;
-  margin: 0 auto;
+.search-txt-input{
+  padding: 12px 20px;
+  font-size:14px;
+  border:1px solid #c8c8c8;
+  border-right:0px;
+  border-top-left-radius: 4px 4px;
+  border-bottom-left-radius: 4px 4px;
+  width: 200px;
+}
+.search-button {
+  padding: 12px 15px;
+  font-size: 16px;
+  outline: none;
   text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  border: solid 1px #c8c8c8;
+  border-right: 0px;
+  background: #f45c03;
+  border-top-right-radius: 4px 4px;
+  border-bottom-right-radius: 4px 4px;
+  position: relative;
+  left:-5px;
 }
-    button[type='submit'] {
-background-color:#E51284;
-color:#fff;
-cursor:pointer;
-}
-button[type='submit']:hover {
-background-color:#ea419c;
-color:#fff;
-cursor:pointer;
+.search-button:hover {
+  text-decoration: none;
+  background: #f67c35;
 }
   </style>  
     </center>
