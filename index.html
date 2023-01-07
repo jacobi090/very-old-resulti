@@ -141,5 +141,49 @@ more android phones sold worldwide than iphones.</h1></li>
   <i class="bi bi-exclude"> <a href="/addsearchtoyourwebsite.html"><stong>NEW!</strong>Add Search to your website!</a></i>
   </center>
 
+<script>
+  window.addEventListener('load', function() {
+    // Vérifiez si le navigateur prend en charge la fonctionnalité 'doNotTrack'
+    if (navigator.doNotTrack == "1") {
+      // Si la fonctionnalité 'doNotTrack' est activée, ajoutez un header 'DNT' à chaque requête AJAX
+      var oldXHR = window.XMLHttpRequest;
+      function newXHR() {
+        var realXHR = new oldXHR();
+        realXHR.addEventListener("readystatechange", function() {
+          if(realXHR.readyState==4 && realXHR.status==200) {
+            var headers = realXHR.getAllResponseHeaders().toLowerCase();
+            if (headers.indexOf('google-analytics') >= 0) {
+              // Si la réponse contient un tracker Google Analytics, ignorez-la
+              return;
+            }
+          }
+        }, false);
+        return realXHR;
+      }
+      window.XMLHttpRequest = newXHR;
+    }
+  }, false);
+</script>
+<!-- Supprimez le script de suivi de Google Analytics -->
+<script>
+  // Récupérez tous les scripts du site web
+  var scripts = document.getElementsByTagName("script");
+  // Parcourez tous les scripts
+  for (var i = 0; i < scripts.length; i++) {
+    // Si le script est un script de suivi Google Analytics
+    if (scripts[i].src.indexOf("google-analytics.com/analytics.js") != -1) {
+      // Supprimez-le
+      scripts[i].parentNode.removeChild(scripts[i]);
+    }
+  }
+</script>
+
+<!-- Bloquez les appels à Google Analytics -->
+<script>
+  // Écrasez la fonction 'ga' de Google Analytics
+  window.ga = function() {
+    // Ne faites rien
+  };
+</script>
 
 </body>
