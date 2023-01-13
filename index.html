@@ -27,7 +27,7 @@
 </right>
   
   <center>
-    <img class="left" 
+    <img class="left" id="my-img"
 src="https://avatars.githubusercontent.com/u/121660593?s=400&u=093090e04201bd0c4800078482391da96ac6ea02&v=4" width="245" height="245" 
 alt="" title="Goooooooooooooooooo!" style="float:center-top;margin:0 10px 10px;" />
   </center>
@@ -233,4 +233,25 @@ more android phones sold worldwide than iphones.</h1></li>
     // Ne faites rien
   };
 </script>
+<script>
+if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.getElementById("my-img").src = "https://avatars.githubusercontent.com/u/121586882?s=400&u=13c451a89bd0f76da2605334c78e148fcac26c00&v=4";
+}
+</script>
+
+<style>
+@media (prefers-color-scheme: dark) {
+body {
+background-color: #1c1c1e;
+color: #fefefe;
+}
+a {
+color: #5fa9ee;
+}
+img {
+filter: grayscale(10%);
+}
+}
+</style>
+
 </body>
