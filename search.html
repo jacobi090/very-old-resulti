@@ -29,8 +29,8 @@ alt="https://gosearch.ga/" title="Goooooooooooooooooo!" style="float:left;margin
   <br>
   </br>
   <form id="standard" method="get" action="/search.html"> 
-    <input type="text" class="search-txt-input" name="q" maxlength="100"> 
-    <input type="submit" value="search" class="search-button">
+    <input type="text" class="search-txt-input" name="q" maxlength="100" id="search-bar"> 
+    <input type="submit" value="search" onclick="saveSearch() class="search-button">
 	</form>
 
 
@@ -336,11 +336,22 @@ javascript:(function(){adid=['adBlock','tadsb'];g=function(x){css=x.createElemen
 <style>
 body::-webkit-scrollbar {
     width: 0.2em;
-    background-color: #F5F5F5;
+    background-color: #003399;
 }
  
 body::-webkit-scrollbar-thumb {
-  background-color: #000000;
+  background-color: #b3b3b3;
 }
 </style>
+
+<script>
+  function saveSearch() {
+    var searchTerm = document.getElementById("search-bar").value;
+    localStorage.setItem("searchTerm", searchTerm);
+  }
+
+  // to retrieve the search term
+  var lastSearch = localStorage.getItem("searchTerm");
+  document.getElementById("search-bar").value = lastSearch;
+</script>
 </html>
