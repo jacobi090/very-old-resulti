@@ -30,7 +30,7 @@ alt="https://gosearch.ga/" title="Goooooooooooooooooo!" style="float:left;margin
   </br>
   <form id="standard" method="get" action="/search.html"> 
     <input type="text" class="search-txt-input" name="q" maxlength="100" id="search-bar"> 
-    <input type="submit" value="search" onclick="saveSearch() class="search-button">
+    <input type="submit" value="search" class="search-button">
 	</form>
 
 
@@ -344,14 +344,5 @@ body::-webkit-scrollbar-thumb {
 }
 </style>
 
-<script>
-  function saveSearch() {
-    var searchTerm = document.getElementById("search-bar").value;
-    localStorage.setItem("searchTerm", searchTerm);
-  }
 
-  // to retrieve the search term
-  var lastSearch = localStorage.getItem("searchTerm");
-  document.getElementById("search-bar").value = lastSearch;
-</script>
 </html>
