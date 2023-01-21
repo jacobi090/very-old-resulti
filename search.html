@@ -329,21 +329,7 @@ body::-webkit-scrollbar-thumb {
   background-color: #b3b3b3;
 }
 </style>
-<script>
-  // Get the current search query from the URL
-  var searchParams = new URLSearchParams(window.location.search);
-  var searchQuery = searchParams.get("gsc.q");
 
-  // Set the value of the search input field
-  document.getElementById("search-bar").value = searchQuery;
-
-  // Add event listener to the form to update the URL when the form is submitted
-  document.getElementById("standard").addEventListener("submit", function(event) {
-    event.preventDefault();
-    var searchValue = document.getElementById("search-bar").value;
-    window.location.href = "/search.html?gsc.q=" + searchValue;
-  });
-</script>
 
 Ce code 
 
