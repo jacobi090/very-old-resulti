@@ -238,12 +238,13 @@ more android phones sold worldwide than iphones.</h1></li>
   };
 </script>
 <script>
+var md = new MobileDetect(window.navigator.userAgent);
 var img = document.getElementById("image");
 
-if (window.innerWidth < 600) {
+if (md.mobile()) {
     img.src = "https://preciousstimulatingdictionary.jinternet.repl.co/Couverture%20d%E2%80%99album%201600x1600%20px.png";
 } else {
     img.src = "https://3102b60d-d057-4de5-9f85-2d397179e3e6.id.repl.co/Couverture%20Facebook%20851x315%20px.png";
-}
 </script>
+
 </body>
