@@ -34,7 +34,15 @@ alt="" title="Goooooooooooooooooo!" style="float:center-top;margin:0 10px 10px;"
   </center>
 		
 <center>	 
-<button id="toggle-sidebar"><h1 style="font-family:'Inter Tight',sans-serif;">Menu ///</button>
+<form name="form" >
+<label for="form"><h5 style="font-family:'Inter Tight',sans-serif;"><font color="white">||| Menu</h5></label>
+<select size="1"  onChange="location = this.options[this.selectedIndex].value;">
+	<option value="" >Click me!</option>
+	<option value="/addsearchtoyourwebsite.html" >Add Search to your Website</option>
+	<option value="/about.html" >About Go!</option>
+	<option value="https://addons.mozilla.org/fr/firefox/addon/go-extension/" >Get the Firefox extension!</option>
+</select>
+</form>
 </center>
 <br>
 </br>
@@ -231,39 +239,7 @@ more android phones sold worldwide than iphones.</h1></li>
     // Ne faites rien
   };
 </script>
-<div class="sidebar">
-  <h2><h2 style="font-family:'Inter Tight',sans-serif;">Menu ///</h2>
-  <button class="close-sidebar"><h1 style="font-family:'Inter Tight',sans-serif;">Close</button>
-<center>
-  <ul>
-    <li><a href="https://addons.mozilla.org/fr/firefox/addon/go-extension/"><left><h3 style="font-family:'Inter Tight',sans-serif;">Get the Firefox
-    Add-On</left></a></li>
-    <li><a href="https://gosearch.ga/addsearchtoyourwebsite.html"><left><h3 style="font-family:'Inter Tight',sans-serif;">Add Search To 
-    Your Website</left></a></li>
-    <li><a href="https://gosearch.ga/about.html"><left><h3 style="font-family:'Inter Tight',sans-serif;">About Go!</left></a></li>
-  </ul>
-</center>
-  
-</div>
-<style>
-.sidebar {
-  width: 200px;
-  height: 0%;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  background-color: #666666;
-  padding: 20px;
-  transform: translateX(-100%); /* Déplace le sidebar vers la gauche de l'écran */
-  transition: all 0.5s ease-in-out;
-}
 
-.sidebar.open {
-  height: 80%; /* défini une hauteur maximale pour le sidebar */
-  transform: translateX(0%); /* Déplace le sidebar vers la gauche de l'écran */
-}
-
-</style>
 <script>
 let toggleBtn = document.getElementById("toggle-sidebar");
 let sidebar = document.querySelector(".sidebar");
