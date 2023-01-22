@@ -254,7 +254,7 @@ more android phones sold worldwide than iphones.</h1></li>
 <style>
 .sidebar {
   width: 200px;
-  height: 100%;
+  height: 0%;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -265,6 +265,7 @@ more android phones sold worldwide than iphones.</h1></li>
 }
 
 .sidebar.open {
+  height: 100%; /* défini une hauteur maximale pour le sidebar */
   transform: translateX(0%); /* Déplace le sidebar vers la gauche de l'écran */
 }
 
