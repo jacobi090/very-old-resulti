@@ -29,7 +29,7 @@ alt="https://gosearch.ga/" title="Goooooooooooooooooo!" style="float:left;margin
   <br>
   </br>
   <form id="standard" method="get" action="/search.html"> 
-    <input type="text" class="search-txt-input" name="q" maxlength="100" id="search-bar"> 
+    <input type="text" class="search-txt-input" name="q" maxlength="100" id="search-bar" placeholder="Search the web with Go!..."> 
     <input type="submit" value="search" class="search-button">
 	</form>
 
@@ -330,6 +330,27 @@ body::-webkit-scrollbar-thumb {
 }
 </style>
 
+<script>
+  setInterval(function() {
+    var placeholders = [
+      "How to make a pancake",
+      "New today",
+      "ChatGPT",
+      "Facebook",
+      "Top 10 article to buy in Amazon",
+      "Twitter",
+      "New Xbox game in Game Pass",
+      "Idea of dish to make at home",
+      "Top 5 country to visit during summer",
+      "Elon Musk",
+      "Cat and dog image",
+      "Online TV",
+      "Breaking News"
+    ];
+    var placeholder = placeholders[Math.floor(Math.random() * placeholders.length)];
+    document.getElementById("search").placeholder = placeholder;
+  }, 5000);
+</script>
 
 
 </html>
