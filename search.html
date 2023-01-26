@@ -271,13 +271,22 @@ var customSearchControl = new google.search.CustomSearchControl(
   margin-right: 50px;
 }
 </style>
-<style>
-@media (max-width: 768px) {
-  #resultbox {
-    padding: 0;
-  }
-}
-</style>
+<script>
+if (window.matchMedia("(min-width: 937px)").matches) {
+  console.log('Device: Desktop')
+  setTimeout(function(){$(".gs-snippet").wrap("<div style='width: 40%;'></div>")},1000);
+} else {
+  console.log('Device: Mobile');
+  document.getElementById('resultsbox').classList.remove("paddingbox");
+  document.getElementById('formcontrol').innerHTML = `<form action="/search" id="searcharea" style="padding-top:20px;padding-left:0px !important;" class="nopadding"><a href="/"><img src="/assets/img/logo.png" style="width: 50%;" class="centre"></a><br>
+<div class="input-group" style="padding-left: 30px; padding-right: 30px; width:100%;">
+<input type="search" class="form-control Post_Description_Text" name="q" id="searchbox" style="resize:none;" rows="1" placeholder="Search the web...">
+<div class="input-group-append"> <button class="btn btn-secondary" type="submit" style="height:38px;width:40.86px;"> <i class="fa fa-search"></i> </button> </div>
+</div></form>`;
+  document.getElementById('searchbox').value = qfc;
+  
+}		
+</script>
     <!-- <DataObject type="action">
       <Attribute name="label" value="Download"/>
       <Attribute name="url" value="http://www.scribd.com/document_downloads/20258723?extension=pdf"/>
