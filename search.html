@@ -98,63 +98,31 @@ h1 {
 <hr style="background-color: #474747;">
   </center>
 <style>
-@font-face {
-    font-family: 'Gotham';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Gotham'), url('https://fonts.cdnfonts.com/s/14898/GothamBook.woff') format('woff');
-    font-display: swap;
-  }
-  @font-face {
-    font-family: 'Gotham';
-    font-style: bold;
-    font-weight: 500;
-    src: local('Gotham'), url('https://fonts.cdnfonts.com/s/14898/GothamMedium.woff') format('woff');
-    font-display: swap;
-  }
-  *:not(hr, .gsc-tabHeader) { border: 0px !important; }
-.gsc-control-cse{
-    font-family:Gotham, sans-serif !important;
+ .gsc-result-info {
+  color: blue !important;
 }
-.gsc-control-cse .gsc-table-result{
-    font-family:Gotham, sans-serif !important;
+  .gsc-control-cse {
+  font-family: Gotham,sans-serif ;
 }
-.gsc-refinementsGradient{
-    background:linear-gradient(to left,rgba(32,33,36,1),rgba(32,33,36,0)) !important;
+    .gsc-results {
+  padding-bottom: 2px;
+  width: 88%;
+}
+    .gsc-control-cse {
+  font-family: arial, sans-serif;
+}
+    .gsc-control-cse, .gsc-control-cse .gsc-table-result {
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+}
+   .gs-spelling {
+  color: #fff;
+  padding-left: 7px;
+  padding-right: 7px;
 }
 
-
-.gs-webResult:not(.gs-no-results-result):not(.gs-error-result) .gs-snippet,.gs-fileFormatType.gsc-option-menu-item-highlighted,.gsc-option{
-    color:#eee !important;
-}
-.gs-webResult div.gs-visibleUrl{
-    color:#009933 !important;
-}
-.gs-webResult div.gs-visibleUrl-short{
-    color:#009933 !important;
-}
-.gsc-cursor-box{
-    border-color:#202124 !important;
-}
-.gsc-results .gsc-cursor-box .gsc-cursor-page{
-    border-color:#eee !important;
-    background-color:#202124 !important;
-    color:#eee !important;
-}
-.gsc-results .gsc-cursor-box .gsc-cursor-current-page{
-    border-color:#0033cc !important;
-    background-color:#0033cc !important;
-    color:#0033cc !important;
-}
-.gsc-result-info {
-color: #eee !important;
-}
-
-.gs-spelling {
-    color: #eee !important;
-}
-
-.gsc-selected-option-container {
+ 
+  .gsc-selected-option-container {
   background-color: #0033cc;
   background-image: linear-gradient(top, whiteSmoke, #f1f1f1);
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -172,31 +140,118 @@ color: #eee !important;
   padding: 0 28px 0 6px;
   position: relative;
   text-align: center;
-} 
+}  
+	  
+      .gsc-webResult .gsc-result {
+  border-bottom: 1px solid #333;
+    border-bottom-color: rgb(51, 51, 51);
+    border-bottom-style: solid;
+    border-bottom-width: 6px;
+  word-break: break-word;
+}
+	  
+   :not(hr, .gsc-tabHeader) {
+  border: 0px !important;
+    border-top-color: currentcolor;
+    border-top-style: none;
+    border-top-width: 0px;
+    border-right-color: currentcolor;
+    border-right-style: none;
+    border-right-width: 0px;
+    border-bottom-color: currentcolor;
+    border-bottom-style: none;
+    border-bottom-width: 0px;
+    border-left-color: currentcolor;
+    border-left-style: none;
+    border-left-width: 0px;
+    border-image-outset: 0;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+	   
+#adBlock.i._cse_block.container. {
+    -webkit-box-orient: vertical;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    transform: rotateZ(0deg);
+}
+	   
 	
-.gsc-control-cse .gsc-option-menu {
-  background: #0033cc;
-  border: 1px solid #eee;
-  border: 1px solid rgba(0, 0, 0, .2);
-  box-shadow: 0 2px 4px #eee;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  cursor: default;
-  font-size: 13px;
-  margin: 0;
-  max-height: 360px;
-  outline: none;
-  padding: 6px 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 7;
+    .gsc-tabsArea {
+  margin: 12px 0;
+    margin-top: 12px;
+    margin-right: 0px;
+    margin-bottom: 12px;
+    margin-left: 0px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  border: 1px solid #3367d6;
+    border-top-color: rgb(51, 103, 214);
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-right-color: rgb(51, 103, 214);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-bottom-color: rgb(51, 103, 214);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: rgb(51, 103, 214);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-image-outset: 0;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+  border-radius: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+  scrollbar-width: none;
+}  
+
+.i_ {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: contents;
+  -ms-flex-align: start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  box-sizing: border-box;
+  overflow: hidden;
+}	   
+
+.gcsc-find-more-on-google-branding {
+      display: none!important;
+    }
+.gsc-adBlock {
+  display: none;
+}
+	   
+.gcsc-find-more-on-google {
+  color: #3366ff;
 }
   </style>
   
 <style>
+img, form {
+  display: inline-block;
+}
+/* sélecteur pour les éléments contenant les résultats de la recherche */
+.gcse-searchresults-only {
+  position: absolute; /* positionnement absolu */
+  right: 0; /* aligner à droite */
+}
 
   </style>
-
 
 
  <script src="https://www.google.com/jsapi"></script>
