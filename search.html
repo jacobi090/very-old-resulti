@@ -102,13 +102,13 @@ h1 {
   color: blue !important;
 }
   .gsc-control-cse {
-  font-family: 
+  font-family: Gotham,sans-serif ;
 }
     .gsc-control-cse {
-  font-family: '
+  font-family: arial, sans-serif;
 }
     .gsc-control-cse, .gsc-control-cse .gsc-table-result {
-  font-family: ;
+  font-family: Arial, sans-serif;
   font-size: 15px;
 }
    .gs-spelling {
@@ -213,18 +213,8 @@ $(window).scroll(function (e) {
     $el.css({ 'position': 'static', 'top': '0px' });
   }
 });
+	</script>
 <script>
-const queryString = window.location.search;
-$(window).scroll(function (e) {
-  var $el = $('.fixedElement');
-  var isPositionFixed = ($el.css('position') == 'fixed');
-  if ($(this).scrollTop() > 200 && !isPositionFixed) {
-    $el.css({ 'position': 'fixed', 'top': '0px' });
-  }
-  if ($(this).scrollTop() < 200 && isPositionFixed) {
-    $el.css({ 'position': 'static', 'top': '0px' });
-  }
-});
 if (window.matchMedia("(min-width: 937px)").matches) {
   console.log('Device: Desktop')
   setTimeout(function(){$(".gs-snippet").wrap("<div style='width: 40%;'></div>")},1000);
@@ -238,7 +228,7 @@ if (window.matchMedia("(min-width: 937px)").matches) {
 </div></form>`;
   document.getElementById('searchbox').value = qfc;
 
-}
+}		
 </script>
 <style>
 @media only screen and (max-width: 768px) {
@@ -363,4 +353,4 @@ body::-webkit-scrollbar-thumb {
   `;
   document.head.appendChild(style);
 </script>
-</html>
+html>
