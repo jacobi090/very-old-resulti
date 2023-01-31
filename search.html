@@ -318,4 +318,18 @@ body::-webkit-scrollbar-thumb {
     }
   }
 </style>
+<script>
+  if (window.innerWidth <= 767) {
+    document.getElementById("animated-2").classList.add("centeredForm");
+  }
+
+  var style = document.createElement("style");
+  style.innerHTML = `
+    .CenterForm {
+      display: flex;
+      justify-content: center;
+    }
+  `;
+  document.head.appendChild(style);
+</script>
 </html>
