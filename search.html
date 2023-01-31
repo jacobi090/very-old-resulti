@@ -213,6 +213,18 @@ $(window).scroll(function (e) {
     $el.css({ 'position': 'static', 'top': '0px' });
   }
 });
+<script>
+const queryString = window.location.search;
+$(window).scroll(function (e) {
+  var $el = $('.fixedElement');
+  var isPositionFixed = ($el.css('position') == 'fixed');
+  if ($(this).scrollTop() > 200 && !isPositionFixed) {
+    $el.css({ 'position': 'fixed', 'top': '0px' });
+  }
+  if ($(this).scrollTop() < 200 && isPositionFixed) {
+    $el.css({ 'position': 'static', 'top': '0px' });
+  }
+});
 if (window.matchMedia("(min-width: 937px)").matches) {
   console.log('Device: Desktop')
   setTimeout(function(){$(".gs-snippet").wrap("<div style='width: 40%;'></div>")},1000);
@@ -225,7 +237,9 @@ if (window.matchMedia("(min-width: 937px)").matches) {
 <div class="input-group-append"> <button class="btn btn-secondary" type="submit" style="height:38px;width:40.86px;"> <i class="fa fa-search"></i> </button> </div>
 </div></form>`;
   document.getElementById('searchbox').value = qfc;
-  
+
+}
+</script>
 }
 </script>
     <!-- <DataObject type="action">
