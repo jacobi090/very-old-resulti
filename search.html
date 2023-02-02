@@ -30,7 +30,7 @@ alt="https://gosearch.ga/" title="Goooooooooooooooooo!" style="float:left;margin
 </a>
   <br>
   <form id="standard" method="get" action="/search.html"> 
-    <input type="text" class="search-txt-input" name="q" maxlength="150" id="search-bar" id="searchbox" placeholder="Search the web with Go!..."> 
+    <input type="text" class="search-txt-input" name="q" maxlength="150" id="searchbox" id="search-bar" placeholder="Search the web with Go!..."> 
     <input type="submit" value="search" class="search-button">
 	</form>
 
@@ -223,7 +223,7 @@ if (window.matchMedia("(min-width: 937px)").matches) {
   console.log('Device: Mobile');
   document.getElementById('resultsbox').classList.remove("paddingbox");
   document.getElementById('formcontrol').innerHTML = `<form id="standard" method="get" action="/search.html"> 
-    <input type="text" class="search-txt-input" name="q" maxlength="150" id="search-bar" id="searchbox" placeholder="Search the web with Go!..."> 
+    <input type="text" class="search-txt-input" name="q" maxlength="150" id="searchbox" id="search-bar" placeholder="Search the web with Go!..."> 
     <input type="submit" value="search" class="search-button">
 	</form>`;
   document.getElementById('searchbox').value = qfc;
