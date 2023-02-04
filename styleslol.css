@@ -23,11 +23,15 @@ h1 {
   border-bottom:5px solid #0079FF;
 }
 
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
 #mascot {
   position: absolute;
   bottom: 0;
   width: 50%;
   left: 25%;
 }
-
 
