@@ -1,7 +1,10 @@
 body {
 background-color:#333333;
 text-align:;
+margin: 0;
+overflow: hidden;
 }
+
 h1 {
 background-color: ;
 }
@@ -20,6 +23,11 @@ h1 {
   border-bottom:5px solid #0079FF;
 }
 
-
+#mascot {
+  position: absolute;
+  bottom: 0;
+  width: 50%;
+  left: 25%;
+}
 
 
