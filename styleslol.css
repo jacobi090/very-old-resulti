@@ -33,5 +33,15 @@ body {
   bottom: 0;
   width: 50%;
   left: 25%;
+  right: 0;
+  margin: auto;
+  width: 100px;
 }
+
+@media (max-width: 767px) {
+  #mascot {
+    width: 80%;
+  }
+}
+
 
