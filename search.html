@@ -12,7 +12,8 @@
 <meta property="og:description" content="Go! is a awesome canadian search engine. It Secure and without innapropriate or/and dangerous website! "/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/> 
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@1,600&display=swap" rel="stylesheet">	
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="styleslol.css" />
   </head>
 	
 
@@ -25,79 +26,45 @@
 
 <a href="/index.html">
   <img class="center" id="my-img"
-src="https://ec00084f-fe98-4f33-9838-0f6f0ef615eb.id.repl.co/Dimensions%20personnalis%C3%A9es%20300x50%20px(3).png" width="300" height="50" 
+src="https://e60d7b28-ab51-4b11-976e-aff11e79026a.id.repl.co/Dimensions%20personnalis%C3%A9es%20300x50%20px(2).png" width="300" height="50" 
 alt="https://gosearch.ga/" title="Goooooooooooooooooo!" style="float:left;margin:20px 0%;" />
 </a>
   <br>
-  <form id="standard" method="get" action="/search.html"> 
-    <input type="text" class="search-txt-input" name="q" maxlength="150"  id="search-bar" placeholder="Search the web with Go!..."> 
-    <input type="submit" value="search" class="search-button">
-	</form>
-
-
-</center>
-  <style>
-    /* resets */
-*,
-*:before,
-*:after {
-   box-sizing: border-box;
+<br>
+<br>
+<br>
+  
+<style>
+#standard {
+  display: flex;
+  justify-content: space-between;
+  max-width: 500px;
+  margin: -75  auto;
 }
 
-body {
-  font-family: 'Open Sans', sans-serif;
-}
-p {
-  font-family: 'Muli', sans-serif;
+#animated-2 {
+  width: 80%;
 }
 
-h1 {
-  font-family: 'Muli', sans-serif;
-  text-transform: uppercase;
+input[type="submit"] {
+  width: 18%;
 }
-.search-txt-input{
-  padding: 12px 20px;
-  font-size:14px;
-  border:1px solid #c8c8c8;
-  border-right:0px;
-  border-top-left-radius: 4px 4px;
-  border-bottom-left-radius: 4px 4px;
-  width: 230px;
-}
-.search-button {
-  padding: 12px 1px;
-  font-size: 16px;
-  outline: none;
-  text-align: center;
-  text-decoration: none;
-  color: #ffffff;
-  border: solid 0px #c8c8c8;
-  border-right: 0px;
-  background: #0033cc;
-  border-top-right-radius: 4px 4px;
-  border-bottom-right-radius: 4px 4px;
-  position: relative;
-  left:-5px;
-}
-.search-button:hover {
-  text-decoration: none;
-  background: #3366ff;
-}
-	  
- #animated-2 .search-txt-input{
-  width: 300px;
-  -webkit-transition: width 0.5s ease-out;
-  transition: width 0.5s ease-out;
-}
+</style>
 
-#animated-2 input[type=text]:focus {
-    width:300px;
-}	  
-	  
-  </style>  
+<form id="standard" method="get" action="/search.html">
+  <div id="animated-2" class="form-group">
+    <input type="text" class="form-control" name="q" maxlength="150" id="search-bar" placeholder="Search the web with Go!...">
+  </div>
+  <input type="submit" value="search" class="btn btn-primary">
+</form>
+
+
+
+
     </h1>
 <hr style="background-color: #474747;">
   </center>
+
 <style>
  .gsc-result-info {
   color: blue !important;
@@ -180,12 +147,22 @@ h1 {
 .gcsc-find-more-on-google {
   color: #3366ff;
 }
+.gsc-results .gsc-cursor {
+  color: #8c8c8c;
+  fill: #8c8c8c;
+}
+.gsc-results .gsc-cursor {
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+}
+.gsc-results .gsc-cursor {
+  color: #b1b1b1;
+  display: inline;
+  fill: #b1b1b1;
+}
   </style>
-  
-
-
-
- <script src="https://www.google.com/jsapi"></script>
+<script src="https://www.google.com/jsapi"></script>
 <script>google.load('search', '1');</script>
 <script>var customSearchOptions = {}; 
 var customSearchControl = new google.search.CustomSearchControl(
@@ -222,19 +199,21 @@ if (window.matchMedia("(min-width: 937px)").matches) {
 } else {
   console.log('Device: Mobile');
   document.getElementById('resultsbox').classList.remove("paddingbox");
-  document.getElementById('formcontrol').innerHTML = `<form action="/search" id="searcharea" style="padding-top:20px;padding-left:0px !important;" class="nopadding"><a href="/"><img src="/assets/img/logo.png" style="width: 50%;" class="centre"></a><br>
-<div class="input-group" style="padding-left: 30px; padding-right: 30px; width:100%;">
-<input type="search" class="form-control Post_Description_Text" name="q" id="searchbox" style="resize:none;" rows="1" placeholder="Search the web...">
-<div class="input-group-append"> <button class="btn btn-secondary" type="submit" style="height:38px;width:40.86px;"> <i class="fa fa-search"></i> </button> </div>
-</div></form>`;
+  document.getElementById('formcontrol').innerHTML = `<form id="standard" method="get" action="/search.html">
+  <div id="animated-2" class="form-group">
+    <input type="text" class="form-control" name="q" maxlength="150" id="search-bar" placeholder="Search the web with Go!...">
+  </div>
+  <input type="submit" value="search" class="btn btn-primary">
+</form>`;
   document.getElementById('searchbox').value = qfc;
 
 }		
 </script>
 <style>
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 975px) {
   form#standard {
     text-align: center;
+    margin: -0 auto;
   }
 }
 </style>
@@ -313,28 +292,6 @@ body::-webkit-scrollbar-thumb {
 }
 </style>
 
-<script>
-  setInterval(function() {
-    var placeholders = [
-      "How to make a pancake",
-      "New today",
-      "ChatGPT",
-      "Facebook",
-      "Top 10 article to buy in Amazon",
-      "Twitter",
-      "New Xbox game in Game Pass",
-      "Idea of dish to make at home",
-      "Top 5 country to visit during summer",
-      "Elon Musk",
-      "Cat and dog image",
-      "Online TV",
-      "Breaking News"
-    ];
-    var placeholder = placeholders[Math.floor(Math.random() * placeholders.length)];
-    document.getElementById("search").placeholder = placeholder;
-  }, 5000);
-</script>
-
 <style>
   @media only screen and (max-width: 767px) {
     #animated-2 {
@@ -390,4 +347,9 @@ return false;
 </script>
 <script src="https://go.statuspage.io/embed/script.js"></script>
 
+
+<script src="https://go.statuspage.io/embed/script.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+  
 <html>
